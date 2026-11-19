@@ -17,8 +17,8 @@ func max_mana() -> int:
 	var o := _owner()
 	return maxi(10, o.level * o.attributes.modifier(Attributes.INT))
 
-func take_damage(amount: int) -> void:
+func use_mana(amount: int) -> void:
 	mana -= amount
 
-func heal(amount: int) -> void:
+func recover_mana(amount: int) -> void:
 	mana += amount

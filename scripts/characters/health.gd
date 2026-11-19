@@ -19,7 +19,7 @@ func _owner() -> Character:
 
 func max_health() -> int:
 	var o := _owner()
-	return maxi(10, o.level * o.attributes.modifier("Constitution"))
+	return maxi(10, o.level + o.attributes.modifier(o.attributes.CON))
 
 func take_damage(amount: int) -> void:
 	health -= amount

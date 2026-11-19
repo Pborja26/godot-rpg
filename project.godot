@@ -11,7 +11,12 @@ config_version=5
 [application]
 
 config/name="Teste"
+run/main_scene="uid://dmb7so1bvco3d"
 config/features=PackedStringArray("4.7", "C#", "Mobile")
+
+[autoload]
+
+GameState="*uid://cdt5qqoddpyhf"
 
 [display]
 

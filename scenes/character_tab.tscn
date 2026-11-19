@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://3i6vvuowijit"]
+
+[ext_resource type="Script" uid="uid://ddhgemi3am421" path="res://scripts/characters/character_tab.gd" id="1_6tkmt"]
+[ext_resource type="Texture2D" uid="uid://bu4f7o3x21xrp" path="res://assets/sprites/knight.png" id="1_im87c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tkmt"]
+atlas = ExtResource("1_im87c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb52n"]
+atlas = ExtResource("1_im87c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vmw0"]
+atlas = ExtResource("1_im87c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r284d"]
+atlas = ExtResource("1_im87c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1hrp6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tkmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb52n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vmw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r284d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="CharacterTab" type="Control" unique_id=910315775]
+layout_mode = 3
+anchor_right = 0.25
+anchor_bottom = 0.25
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tkmt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=632445882]
+position = Vector2(165, 92)
+zoom = Vector2(3.5, 3.5)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=57986232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=332028754]
+layout_mode = 2
+
+[node name="CharacterName" type="Label" parent="MarginContainer/VBoxContainer" unique_id=928177324]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="CharacterLevel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1408556082]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=408882594]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1565081096]
+position = Vector2(32, 17)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_1hrp6")
+autoplay = "default"
+
+[node name="CharacterStatus" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=754902541]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10

@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dmb7so1bvco3d"]
+
+[ext_resource type="FontFile" uid="uid://j8wotlqoccw5" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_5nl2f"]
+[ext_resource type="Script" uid="uid://ccyykc50qw1ph" path="res://scripts/characters/creation.gd" id="1_n44om"]
+[ext_resource type="FontFile" uid="uid://de4j4tuxsfm5c" path="res://assets/fonts/PixelOperator8.ttf" id="2_5jkw8"]
+
+[node name="CharacterCreation" type="Control" unique_id=2061893959]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n44om")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=198968041]
+position = Vector2(577.99994, 322.99997)
+scale = Vector2(-277.9972, -54.628273)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=413023725]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1806753395]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1239056027]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_5nl2f")
+text = "Choose your character's name:"
+
+[node name="NameEdit" type="LineEdit" parent="MarginContainer/VBoxContainer" unique_id=777634515]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jkw8")
+
+[node name="PointsLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2061516220]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jkw8")
+
+[node name="AttributesList" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1994579949]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1447609606]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5jkw8")
+text = "Create character"

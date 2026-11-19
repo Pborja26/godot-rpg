@@ -12,6 +12,7 @@ var xp: int = 0:
 		if owner == null:
 			return
 		while xp >= next_level_at():
+			xp -= next_level_at()
 			owner.level += 1
 			leveled_up.emit(owner.level)
 
