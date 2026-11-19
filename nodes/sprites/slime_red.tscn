@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://05ysfwni5j7d"]
+
+[ext_resource type="Texture2D" uid="uid://cp5043ns5dirp" path="res://assets/sprites/slime_purple.png" id="1_huhxd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upf4k"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ual5e"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wqpr"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1y2p"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d81s2"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slx5b"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4dqg"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfsoa"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plj7a"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjy6c"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0tb2"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uoew7"]
+atlas = ExtResource("1_huhxd")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ua8bj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upf4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ual5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wqpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1y2p")
+}],
+"loop": 0,
+"name": &"damage",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d81s2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slx5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4dqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfsoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plj7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjy6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0tb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uoew7")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 11.0
+}]
+
+[node name="SlimeRed" type="AnimatedSprite2D" unique_id=1414833381]
+sprite_frames = SubResource("SpriteFrames_ua8bj")
+animation = &"damage"
+frame = 3
+frame_progress = 1.0
