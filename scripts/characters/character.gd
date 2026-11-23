@@ -8,6 +8,8 @@ var attributes := Attributes.new()
 var health: HealthPoints
 var mana: ManaPoints
 var xp: Experience
+var inventory := CharacterInventory.new()
+var equipement := CharacterEquips.new()
 
 func _init(p_name: String = "") -> void:
 	name = p_name
@@ -19,3 +21,31 @@ func _init(p_name: String = "") -> void:
 func restore() -> void:
 	health.health = health.max_health()
 	mana.mana = mana.max_mana()
+
+func equip(item: Item) -> bool:
+	if equipement.slot_for(item) == -1:
+		return false
+	if not inventory.remove(item):
+		return false
+	var old := equipement.equip(item)
+	if old:
+		inventory.add(old)
+	return true
+
+func unequip(slot: CharacterEquips.Slot) -> bool:
+	var old := equipement.get_item(slot)
+	if old == null or not inventory.add(old):
+		return false
+	equipement.unequip(slot)
+	return true
+
+func use_item(item: Item) -> bool:
+	if not inventory.remove(item):
+		return false
+	item.use(self)
+	return true
+
+func attack_damage() -> int:
+	var w := equipement.weapon()
+	var base: int = w.roll_damage() if w else randi_range(1, 2)
+	return maxi(1, base + attributes.modifier(Attributes.STR))

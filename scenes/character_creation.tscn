@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ccyykc50qw1ph" path="res://scripts/characters/creation.gd" id="1_n44om"]
 [ext_resource type="FontFile" uid="uid://de4j4tuxsfm5c" path="res://assets/fonts/PixelOperator8.ttf" id="2_5jkw8"]
 
+[sub_resource type="Theme" id="Theme_slepq"]
+
 [node name="CharacterCreation" type="Control" unique_id=2061893959]
 layout_mode = 3
 anchors_preset = 15
@@ -53,9 +55,25 @@ theme_override_fonts/font = ExtResource("2_5jkw8")
 unique_name_in_owner = true
 layout_mode = 2
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AttributesList" unique_id=1253744646]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AttributesList" unique_id=1368380828]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AttributesList" unique_id=1634634637]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AttributesList" unique_id=708999354]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer/AttributesList" unique_id=752826527]
+layout_mode = 2
+
 [node name="CreateButton" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1447609606]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
+theme = SubResource("Theme_slepq")
 theme_override_fonts/font = ExtResource("2_5jkw8")
 text = "Create character"
