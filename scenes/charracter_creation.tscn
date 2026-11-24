@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bot1kgulcfvi7"]
+
+[node name="CharracterCreation" type="Control" unique_id=1837214082]
+layout_mode = 3
+anchor_right = 0.25100002
+anchor_bottom = 0.252
+offset_right = -0.15200806
+offset_bottom = -0.29600525
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1390392247]
+anchor_mode = 0
+zoom = Vector2(4, 4)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1223804718]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12

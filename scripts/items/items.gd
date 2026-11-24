@@ -12,3 +12,7 @@ func max_stack() -> int:
 
 func describe() -> String:
 	return name
+
+## Aplica o efeito do item. Retorna false se o item não é usável.
+func use(_user: Character) -> bool:
+	return false

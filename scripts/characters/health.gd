@@ -7,8 +7,9 @@ var _owner_ref: WeakRef
 
 var health: int = 1:
 	set(value):
+		var was_alive := health > 0
 		health = clampi(value, 0, max_health())
-		if health == 0:
+		if was_alive and health == 0:
 			died.emit()
 
 func _init(owner: Character) -> void:
@@ -19,7 +20,7 @@ func _owner() -> Character:
 
 func max_health() -> int:
 	var o := _owner()
-	return maxi(10, o.level + o.attributes.modifier(o.attributes.CON))
+	return maxi(1, 10 + o.level * (4 + o.attributes.modifier(Attributes.CON)))
 
 func take_damage(amount: int) -> void:
 	health -= amount

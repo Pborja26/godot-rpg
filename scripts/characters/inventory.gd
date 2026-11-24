@@ -35,6 +35,7 @@ func remove(item: Item, amount := 1) -> bool:
 			continue
 		var take := mini(slot.amount, amount)
 		slot.amount -= take
+		amount -= take
 		if slot.amount == 0:
 			slots.remove_at(i)
 		if amount == 0:

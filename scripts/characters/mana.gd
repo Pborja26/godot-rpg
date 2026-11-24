@@ -15,7 +15,7 @@ func _owner() -> Character:
 
 func max_mana() -> int:
 	var o := _owner()
-	return maxi(10, o.level * o.attributes.modifier(Attributes.INT))
+	return maxi(0, 5 + o.level * (3 + o.attributes.modifier(Attributes.INT)))
 
 func use_mana(amount: int) -> void:
 	mana -= amount

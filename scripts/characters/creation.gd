@@ -16,6 +16,7 @@ const ATTRIBUTES_LIST := [
 @onready var points_label: Label = %PointsLabel
 @onready var attributes_list: VBoxContainer = %AttributesList
 @onready var create_button: Button = %CreateButton
+@onready var str_value: Label = %STRValue
 
 var _values := {}
 var _values_labels := {}

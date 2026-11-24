@@ -40,9 +40,11 @@ func unequip(slot: CharacterEquips.Slot) -> bool:
 	return true
 
 func use_item(item: Item) -> bool:
-	if not inventory.remove(item):
+	if inventory.count(item) == 0:
 		return false
-	item.use(self)
+	if not item.use(self):
+		return false
+	inventory.remove(item)
 	return true
 
 func attack_damage() -> int:
